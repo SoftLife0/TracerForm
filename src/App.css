@@ -4,3 +4,16 @@ body {
     background: #fff;
     font-family: 'SF UI Display Bold', sans-serif;
 }
+
+.pill-button{
+    color: #992621;
+    border: 1px solid #992621;
+    background-color: white;
+    border-radius:10px ;
+    padding: 16px 22px;
+    box-shadow: 0 2px 8px 0 rgba(48, 44, 255, 0.1);
+    text-align: center;
+    font-weight: bold;
+    transition: width 2s;
+    /* width: 100%; */
+  }
