@@ -8,6 +8,26 @@ const Info = ({ formData, onChange }) => {
     onChange(name, value);
   };
 
+  const genderOptions = [
+    { value: '', label: 'Select an option...', disabled: true },
+    { value: 'Male', label: 'Male' },
+    { value: 'Female', label: 'Female' }
+  ];
+
+  const othersOptions = [
+    { value: '', label: 'Select an option...', disabled: true },
+    { value: 'Yes', label: 'Yes' },
+    { value: 'No', label: 'No' }
+  ];
+
+  const satisfactionOptions = [
+    { value: '', label: 'Select an option...', disabled: true },
+    { value: 'Very satisfied', label: 'Very satisfied' },
+    { value: 'Satisfied', label: 'Satisfied' },
+    { value: 'Unsatisfied', label: 'Unsatisfied' },
+    { value: 'Very unsatisfied', label: 'Very unsatisfied' }
+  ];
+
   return (
     <div>
 
@@ -24,9 +44,11 @@ const Info = ({ formData, onChange }) => {
         fullWidth
         margin="normal"
       >
-        <MenuItem disabled value=""> Select an option... </MenuItem>
-        <MenuItem value="Male">Male</MenuItem>
-        <MenuItem value="Female">Female</MenuItem>
+        {genderOptions.map(option => (
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
+          </MenuItem>
+        ))}
       </TextField>
 
       <TextField
@@ -84,59 +106,61 @@ const Info = ({ formData, onChange }) => {
         fullWidth
         margin="normal"
       >
-        <MenuItem disabled value=""> Select an option... </MenuItem>
-        <MenuItem value="Yes">Yes</MenuItem>
-        <MenuItem value="No">No</MenuItem>
+        {othersOptions.map(option => (
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
+          </MenuItem>
+        ))}
       </TextField>
 
       {formData.others === 'Yes' && (
-  <>
-    <TextField
-      label="If Yes, List programme"
-      name="pro"
-      value={formData.pro}
-      onChange={handleInputChange}
-      fullWidth
-      margin="normal"
-    />
+      <>
+        <TextField
+          label="If Yes, List programme"
+          name="pro"
+          value={formData.pro}
+          onChange={handleInputChange}
+          fullWidth
+          margin="normal"
+        />
 
-    {/* Additional fields for the "Yes" option */}
-    <TextField
-      label="Name of Institution"
-      name="institution"
-      value={formData.institution}
-      onChange={handleInputChange}
-      fullWidth
-      margin="normal"
-    />
+        {/* Additional fields for the "Yes" option */}
+        <TextField
+          label="Name of Institution"
+          name="institution"
+          value={formData.institution}
+          onChange={handleInputChange}
+          fullWidth
+          margin="normal"
+        />
 
-    <TextField
-      type="number"
-      label="Year of Completion"
-      name="completed"
-      value={formData.completed}
-      onChange={handleInputChange}
-      fullWidth
-      margin="normal"
-    />
+        <TextField
+          type="number"
+          label="Year of Completion"
+          name="completed"
+          value={formData.completed}
+          onChange={handleInputChange}
+          fullWidth
+          margin="normal"
+        />
 
-    <TextField
-      select
-      label="Overall satisfaction with academic preparation"
-      name="satisfaction"
-      value={formData.satisfaction}
-      onChange={handleInputChange}
-      fullWidth
-      margin="normal"
-    >
-      <MenuItem disabled value=""> Select an option... </MenuItem>
-      <MenuItem value="Very satisfied">Very satisfied</MenuItem>
-      <MenuItem value="Satisfied">Satisfied</MenuItem>
-      <MenuItem value="Unsatisfied">Unsatisfied</MenuItem>
-      <MenuItem value="Very unsatisfied">Very unsatisfied</MenuItem>
-    </TextField>
-      </>
-    )}
+<TextField
+            select
+            label="Overall satisfaction with academic preparation"
+            name="satisfaction"
+            value={formData.satisfaction}
+            onChange={handleInputChange}
+            fullWidth
+            margin="normal"
+          >
+            {satisfactionOptions.map(option => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
+          </>
+        )}
 
 
     </div>
