@@ -41,13 +41,34 @@ const Form = () => {
     computer: '',
     critical: '',
     research: '',
+    team: '',
+    planning: '',
+    management: '',
+    quality: '',
+    creative: '',
+    adaptable: '',
+    responsible: '',
+    // Initail state for Ability Information
+    theoreticals: '',
+    technicals: '',
+    communications: '',
+    comprehensions: '',
+    quantitatives: '',
+    computers: '',
+    criticals: '',
+    researchs: '',
     teams: '',
     plannings: '',
     managements: '',
     qualitys: '',
     creatives: '',
     adaptables: '',
-    responsibles: ''
+    responsibles: '',
+    staying: '',
+    schoolReturn: '',
+    unemployedReason: '',
+    employment: '',
+    workframe: ''
   });
 
   const [step, setStep] = useState(1); // State to track current step

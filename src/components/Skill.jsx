@@ -45,14 +45,14 @@ const Skill = ({ formData, onChange }) => {
 
   // Define an array of questions with their corresponding names
   const abilityQuestions = [
-    { name: 'theoretical', label: 'Specific job-related theoretical knowledge' },
-    { name: 'technical', label: 'Specific job-related skills (e.g. technical skills)' },
-    { name: 'communication', label: 'Communication (oral and written) – speak/write in a clear, concise, correct manner' },
-    { name: 'comprehension', label: 'Comprehension - can restate information, ideas and concepts in different ways' },
-    { name: 'quantitative', label: 'Quantitative skills (Ability to use mathematical concepts)' },
-    { name: 'computer', label: 'Computer skills' },
-    { name: 'critical', label: 'Critical thinking and problem solving - evaluates his/her own thinking for problem-solving and decision making' },
-    { name: 'research', label: 'Research and analysis - collects, analyzes, and organizes relevant information' },
+    { name: 'theoreticals', label: 'Specific job-related theoretical knowledge' },
+    { name: 'technicals', label: 'Specific job-related skills (e.g. technical skills)' },
+    { name: 'communications', label: 'Communication (oral and written) – speak/write in a clear, concise, correct manner' },
+    { name: 'comprehensions', label: 'Comprehension - can restate information, ideas and concepts in different ways' },
+    { name: 'quantitatives', label: 'Quantitative skills (Ability to use mathematical concepts)' },
+    { name: 'computers', label: 'Computer skills' },
+    { name: 'criticals', label: 'Critical thinking and problem solving - evaluates his/her own thinking for problem-solving and decision making' },
+    { name: 'researchs', label: 'Research and analysis - collects, analyzes, and organizes relevant information' },
     { name: 'teams', label: 'Team-work' },
     { name: 'plannings', label: 'Organization and planning - determines tasks and resources to complete project objectives' },
     { name: 'managements', label: 'Time management - sets priorities and allocates time efficiently to complete tasks within deadlines' },
