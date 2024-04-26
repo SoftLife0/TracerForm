@@ -3,6 +3,7 @@ import { Container } from '@mui/material';
 import Header from '../components/Header';
 import SubmitButton from '../components/Button';
 import Info from '../components/Info';
+import Employment from '../components/Employment';
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -13,7 +14,23 @@ const Form = () => {
     programmePursued: '',
     yearOfCompletion: '',
     others: '',
-    pro: ''
+    pro: '',
+    institution: '',
+    completed: '',
+    satisfaction: '',
+    // Initial state for employment information
+    current: '',
+    job: '',
+    service: '',
+    orgname: '',
+    orgadd: '',
+    title: '',
+    orgtype: '',
+    salary: '',
+    employment: '',
+    skills: '',
+    timeframe: '',
+    earn: ''
   });
 
   const [step, setStep] = useState(1); // State to track current step
@@ -70,7 +87,9 @@ const Form = () => {
 
         <form onSubmit={handleSubmit}>
 
-          <Info formData={formData} onChange={handleInputChange} />
+          {step === 1 && <Info formData={formData} onChange={handleInputChange} />}
+          {step === 2 && <Employment formData={formData} onChange={handleInputChange} />}
+
 
           {step === 1 && (
             <SubmitButton onClick={handleNext} text="Next" />

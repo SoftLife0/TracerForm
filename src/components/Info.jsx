@@ -32,7 +32,7 @@ const Info = ({ formData, onChange }) => {
     <div>
 
       <div className='title'>
-        <h4 style={{ fontWeight: 'bold', fontSize: '20px', margin: '0' }}>Personal Information</h4>
+        <h4 style={{ fontWeight: 'bold', fontSize: '24px', margin: '0' }}>Personal Information</h4>
       </div>
 
       <TextField
