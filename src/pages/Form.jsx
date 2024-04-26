@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import SubmitButton from '../components/Button';
 import Info from '../components/Info';
 import Employment from '../components/Employment';
+import Skill from '../components/Skill';
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -30,7 +31,23 @@ const Form = () => {
     employment: '',
     skills: '',
     timeframe: '',
-    earn: ''
+    earn: '',
+    // Intia state for Skill Information
+    theoretical: '',
+    technical: '',
+    communication: '',
+    comprehension: '',
+    quantitative: '',
+    computer: '',
+    critical: '',
+    research: '',
+    teams: '',
+    plannings: '',
+    managements: '',
+    qualitys: '',
+    creatives: '',
+    adaptables: '',
+    responsibles: ''
   });
 
   const [step, setStep] = useState(1); // State to track current step
@@ -86,15 +103,15 @@ const Form = () => {
         </div>
 
         <form onSubmit={handleSubmit}>
-
           {step === 1 && <Info formData={formData} onChange={handleInputChange} />}
           {step === 2 && <Employment formData={formData} onChange={handleInputChange} />}
+          {step === 3 && <Skill formData={formData} onChange={handleInputChange} />}
+          {/* Add more components for additional steps if needed */}
+          
 
-
-          {step === 1 && (
+          {step < 5 ? (
             <SubmitButton onClick={handleNext} text="Next" />
-          )}
-          {step === 2 && (
+          ) : (
             <SubmitButton onClick={handleSubmit} text="Submit" />
           )}
         </form>
