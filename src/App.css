@@ -23,11 +23,11 @@ body {
 .headings h2 {
     font-size: 25px;
     font-family: 'SF UI Display ', sans-serif; 
-    margin: 1vh;
+    margin: 1vh 0;
 }
 
 .headings p {
     text-align: justify;
     font-family: 'SF UI Display ', sans-serif;
-    margin: 1vh;
+    margin: 1vh 0;
 }

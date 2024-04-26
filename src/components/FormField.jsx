@@ -14,7 +14,7 @@ const FormField = ({ label, type, value, onChange, options }) => {
           select
           label={label}
           value={value}
-          margin='normal'
+          margin='dense'
           onChange={handleChange}
           name={label.toLowerCase().replace(/\s+/g, '_')} // Convert label to lowercase and replace spaces with underscores
         >
@@ -30,7 +30,7 @@ const FormField = ({ label, type, value, onChange, options }) => {
           type={type} // Set input type dynamically
           label={label}
           value={value}
-          margin='normal'
+          margin='dense'
           onChange={handleChange}
           name={label.toLowerCase().replace(/\s+/g, '_')} // Convert label to lowercase and replace spaces with underscores
         />

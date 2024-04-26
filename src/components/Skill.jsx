@@ -120,7 +120,8 @@ const Skill = ({ formData, onChange }) => {
           value={formData[question.name]}
           onChange={handleInputChange}
           fullWidth
-          margin="normal"
+          margin="dense"
+          variant="standard"
         >
           <MenuItem value="" disabled>Select an option...</MenuItem>
           {skillOptions.map((option) => (
@@ -146,7 +147,8 @@ const Skill = ({ formData, onChange }) => {
           value={formData[question.name]}
           onChange={handleInputChange}
           fullWidth
-          margin="normal"
+          margin="dense"
+          variant="standard"
         >
           <MenuItem value="" disabled>Select an option...</MenuItem>
           {abilityOptions.map((option) => (
@@ -170,7 +172,8 @@ const Skill = ({ formData, onChange }) => {
         value={formData.staying}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       >
         {stayingOptions.map(option => (
           <MenuItem key={option.value} value={option.value}>
@@ -186,7 +189,8 @@ const Skill = ({ formData, onChange }) => {
         value={formData.schoolReturn}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       >
         {schoolReturnOptions.map(option => (
           <MenuItem key={option.value} value={option.value}>
@@ -202,7 +206,8 @@ const Skill = ({ formData, onChange }) => {
         value={formData.unemployedReason}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       >
         {unemployedReasonOptions.map(option => (
           <MenuItem key={option.value} value={option.value}>
@@ -218,7 +223,8 @@ const Skill = ({ formData, onChange }) => {
         value={formData.employment}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       >
         {employmentOptions.map(option => (
           <MenuItem key={option.value} value={option.value}>
@@ -235,7 +241,8 @@ const Skill = ({ formData, onChange }) => {
             value={formData.workframe}
             onChange={handleInputChange}
             fullWidth
-            margin="normal"
+            margin="dense"
+            variant="standard"
         >
             {workframeOptions.map(option => (
             <MenuItem key={option.value} value={option.value}>

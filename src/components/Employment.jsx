@@ -96,7 +96,8 @@ const Employment = ({ formData, onChange }) => {
         value={formData.current}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       >
         {currentOptions.map(option => (
           <MenuItem key={option.value} value={option.value}>
@@ -112,7 +113,8 @@ const Employment = ({ formData, onChange }) => {
         value={formData.job}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       >
         {jobOptions.map(option => (
           <MenuItem key={option.value} value={option.value}>
@@ -128,7 +130,8 @@ const Employment = ({ formData, onChange }) => {
         value={formData.serviceOptions}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       >
         {serviceOptions.map(option => (
           <MenuItem key={option.value} value={option.value}>
@@ -143,7 +146,8 @@ const Employment = ({ formData, onChange }) => {
         value={formData.orgname}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       />
 
       <TextField
@@ -152,7 +156,8 @@ const Employment = ({ formData, onChange }) => {
         value={formData.orgadd}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       />
 
       <TextField
@@ -161,7 +166,8 @@ const Employment = ({ formData, onChange }) => {
         value={formData.title}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       />
 
       <TextField
@@ -171,7 +177,8 @@ const Employment = ({ formData, onChange }) => {
         value={formData.orgtypeOptions}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       >
         {orgtypeOptions.map(option => (
           <MenuItem key={option.value} value={option.value}>
@@ -187,7 +194,8 @@ const Employment = ({ formData, onChange }) => {
         value={formData.salaryOptions}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       >
         {salaryOptions.map(option => (
           <MenuItem key={option.value} value={option.value}>
@@ -203,7 +211,8 @@ const Employment = ({ formData, onChange }) => {
         value={formData.employmentOptions}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       >
         {employmentOptions.map(option => (
           <MenuItem key={option.value} value={option.value}>
@@ -219,7 +228,8 @@ const Employment = ({ formData, onChange }) => {
         value={formData.skillsOptions}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       >
         {skillsOptions.map(option => (
           <MenuItem key={option.value} value={option.value}>
@@ -235,7 +245,8 @@ const Employment = ({ formData, onChange }) => {
         value={formData.timeframeOptions}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       >
         {timeframeOptions.map(option => (
           <MenuItem key={option.value} value={option.value}>
@@ -251,7 +262,8 @@ const Employment = ({ formData, onChange }) => {
         value={formData.earnOptions}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       >
         {earnOptions.map(option => (
           <MenuItem key={option.value} value={option.value}>

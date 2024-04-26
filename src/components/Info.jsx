@@ -31,8 +31,8 @@ const Info = ({ formData, onChange }) => {
   return (
     <div>
 
-      <div className='title'>
-        <h4 style={{ fontWeight: 'bold', fontSize: '24px', margin: '0' }}>Personal Information</h4>
+      <div className='headings'>
+        <h2>Personal Information</h2>
       </div>
 
       <TextField
@@ -42,7 +42,8 @@ const Info = ({ formData, onChange }) => {
         value={formData.gender}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       >
         {genderOptions.map(option => (
           <MenuItem key={option.value} value={option.value}>
@@ -57,7 +58,8 @@ const Info = ({ formData, onChange }) => {
         value={formData.workAddress}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       />
 
       <TextField
@@ -66,7 +68,8 @@ const Info = ({ formData, onChange }) => {
         value={formData.mobileNumber}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       />
 
       <TextField
@@ -75,7 +78,8 @@ const Info = ({ formData, onChange }) => {
         value={formData.residence}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       />
 
       <TextField
@@ -84,7 +88,8 @@ const Info = ({ formData, onChange }) => {
         value={formData.programmePursued}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       />
 
       <TextField
@@ -94,7 +99,8 @@ const Info = ({ formData, onChange }) => {
         value={formData.yearOfCompletion}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       />
 
       <TextField
@@ -104,7 +110,8 @@ const Info = ({ formData, onChange }) => {
         value={formData.others}
         onChange={handleInputChange}
         fullWidth
-        margin="normal"
+        margin="dense"
+        variant="standard"
       >
         {othersOptions.map(option => (
           <MenuItem key={option.value} value={option.value}>
@@ -121,7 +128,8 @@ const Info = ({ formData, onChange }) => {
           value={formData.pro}
           onChange={handleInputChange}
           fullWidth
-          margin="normal"
+          margin="dense"
+          variant="standard"
         />
 
         {/* Additional fields for the "Yes" option */}
@@ -131,7 +139,8 @@ const Info = ({ formData, onChange }) => {
           value={formData.institution}
           onChange={handleInputChange}
           fullWidth
-          margin="normal"
+          margin="dense"
+          variant="standard"
         />
 
         <TextField
@@ -141,7 +150,8 @@ const Info = ({ formData, onChange }) => {
           value={formData.completed}
           onChange={handleInputChange}
           fullWidth
-          margin="normal"
+          margin="dense"
+          variant="standard"
         />
 
         <TextField
@@ -151,7 +161,8 @@ const Info = ({ formData, onChange }) => {
             value={formData.satisfaction}
             onChange={handleInputChange}
             fullWidth
-            margin="normal"
+            margin="dense"
+            variant="standard"
           >
             {satisfactionOptions.map(option => (
               <MenuItem key={option.value} value={option.value}>
