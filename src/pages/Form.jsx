@@ -6,19 +6,22 @@ import Info from '../components/Info';
 
 const Form = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: ''
+    gender: '',
+    email: '',
+    status: '',
+    additionalField1: '',
+    additionalField2: ''
   });
 
-  const [errors, setErrors] = useState({});
-
-  const handleChange = (e) => {
+  // Define onChange function to handle form field changes
+  const handleFieldChange = (fieldName, value) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [fieldName]: value
     });
   };
+
+  const [errors, setErrors] = useState({});
 
   const validateForm = () => {
     const newErrors = {};
@@ -39,22 +42,33 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     if (!validateForm()) {
       return;
     }
-
-    // Handle form submission here
-
-    // Clear form data after successful submission
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: ''
-    });
-
-    // Handle success, display message, etc.
+  
+    try {
+      const response = await fetch('YOUR_API_ENDPOINT', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+  
+      if (response.ok) {
+        // Handle successful form submission (e.g., show success message)
+        console.log('Form submitted successfully!');
+      } else {
+        // Handle unsuccessful form submission (e.g., show error message)
+        console.error('Failed to submit form');
+      }
+    } catch (error) {
+      // Handle error (e.g., show error message)
+      console.error('Error submitting form:', error);
+    }
   };
+
 
   return (
     <>
@@ -75,7 +89,8 @@ const Form = () => {
           <h4 style={{ fontWeight:'bold', fontSize:'18px', margin: '0' }}>Personal Information</h4>
         </div>
 
-        <Info formData={formData} errors={errors} handleChange={handleChange} />
+        
+        <Info formData={formData} errors={errors} onChange={handleFieldChange} />
 
         <SubmitButton onClick={handleSubmit} text="Submit" />
 
