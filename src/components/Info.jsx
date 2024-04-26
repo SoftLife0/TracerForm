@@ -144,7 +144,7 @@ const Info = ({ formData, onChange }) => {
           margin="normal"
         />
 
-<TextField
+        <TextField
             select
             label="Overall satisfaction with academic preparation"
             name="satisfaction"
@@ -160,7 +160,7 @@ const Info = ({ formData, onChange }) => {
             ))}
           </TextField>
           </>
-        )}
+      )}
 
 
     </div>
