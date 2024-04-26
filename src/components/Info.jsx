@@ -1,81 +1,146 @@
 // Info.jsx
 import React from 'react';
-import FormField from './FormField';
+import { TextField, MenuItem } from '@mui/material';
 
-const Info = ({ formData, errors, onChange }) => {
-  // Options for gender select field
-  const genderOptions = [
-    { value: 'male', label: 'Male' },
-    { value: 'female', label: 'Female' }
-  ];
-
-  // Options for status select field
-  const statusOptions = [
-    { value: 'yes', label: 'Yes' },
-    { value: 'no', label: 'No' }
-  ];
-
-  // Options for additional field 1 when status is 'yes'
-  const additionalField1Options = [
-    { value: 'option1', label: 'Option 1' },
-    { value: 'option2', label: 'Option 2' }
-  ];
-
-  const handleFieldChange = (fieldName, value) => {
-    onChange(fieldName, value);
+const Info = ({ formData, onChange }) => {
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    onChange(name, value);
   };
 
   return (
     <div>
-      {/* Gender select field */}
-      <FormField
+
+      <div className='title'>
+        <h4 style={{ fontWeight: 'bold', fontSize: '20px', margin: '0' }}>Personal Information</h4>
+      </div>
+
+      <TextField
+        select
         label="Gender"
-        type="select"
+        name="gender"
         value={formData.gender}
-        onChange={handleFieldChange}
-        options={genderOptions}
+        onChange={handleInputChange}
+        fullWidth
+        margin="normal"
+      >
+        <MenuItem disabled value=""> Select an option... </MenuItem>
+        <MenuItem value="Male">Male</MenuItem>
+        <MenuItem value="Female">Female</MenuItem>
+      </TextField>
+
+      <TextField
+        label="Work Address"
+        name="workAddress"
+        value={formData.workAddress}
+        onChange={handleInputChange}
+        fullWidth
+        margin="normal"
       />
 
-      {/* Email input field */}
-      <FormField
-        label="Email"
-        type="email"
-        value={formData.email}
-        onChange={handleFieldChange}
+      <TextField
+        label="Mobile Number"
+        name="mobileNumber"
+        value={formData.mobileNumber}
+        onChange={handleInputChange}
+        fullWidth
+        margin="normal"
       />
 
-      {/* Status select field */}
-      <FormField
-        label="Status"
-        type="select"
-        value={formData.status}
-        onChange={handleFieldChange}
-        options={statusOptions}
+      <TextField
+        label="Country of Residence"
+        name="residence"
+        value={formData.residence}
+        onChange={handleInputChange}
+        fullWidth
+        margin="normal"
       />
 
-      {/* Additional fields when status is 'yes' */}
-      {formData.status === 'yes' && (
-        <>
-          {/* Select field */}
-          <FormField
-            label="Additional Field 1"
-            type="select"
-            value={formData.additionalField1}
-            onChange={handleFieldChange}
-            options={additionalField1Options}
-          />
+      <TextField
+        label="Programme Pursued"
+        name="programmePursued"
+        value={formData.programmePursued}
+        onChange={handleInputChange}
+        fullWidth
+        margin="normal"
+      />
 
-          {/* Input field */}
-          <FormField
-            label="Additional Field 2"
-            type="text"
-            value={formData.additionalField2}
-            onChange={handleFieldChange}
-          />
-        </>
-      )}
+      <TextField
+        type="number"
+        label="Year of Completion"
+        name="yearOfCompletion"
+        value={formData.yearOfCompletion}
+        onChange={handleInputChange}
+        fullWidth
+        margin="normal"
+      />
+
+      <TextField
+        select
+        label="Since your graduation have you gone on to take any other programme?"
+        name="others"
+        value={formData.others}
+        onChange={handleInputChange}
+        fullWidth
+        margin="normal"
+      >
+        <MenuItem disabled value=""> Select an option... </MenuItem>
+        <MenuItem value="Yes">Yes</MenuItem>
+        <MenuItem value="No">No</MenuItem>
+      </TextField>
+
+      {formData.others === 'Yes' && (
+  <>
+    <TextField
+      label="If Yes, List programme"
+      name="pro"
+      value={formData.pro}
+      onChange={handleInputChange}
+      fullWidth
+      margin="normal"
+    />
+
+    {/* Additional fields for the "Yes" option */}
+    <TextField
+      label="Name of Institution"
+      name="institution"
+      value={formData.institution}
+      onChange={handleInputChange}
+      fullWidth
+      margin="normal"
+    />
+
+    <TextField
+      type="number"
+      label="Year of Completion"
+      name="completed"
+      value={formData.completed}
+      onChange={handleInputChange}
+      fullWidth
+      margin="normal"
+    />
+
+    <TextField
+      select
+      label="Overall satisfaction with academic preparation"
+      name="satisfaction"
+      value={formData.satisfaction}
+      onChange={handleInputChange}
+      fullWidth
+      margin="normal"
+    >
+      <MenuItem disabled value=""> Select an option... </MenuItem>
+      <MenuItem value="Very satisfied">Very satisfied</MenuItem>
+      <MenuItem value="Satisfied">Satisfied</MenuItem>
+      <MenuItem value="Unsatisfied">Unsatisfied</MenuItem>
+      <MenuItem value="Very unsatisfied">Very unsatisfied</MenuItem>
+    </TextField>
+      </>
+    )}
+
+
     </div>
   );
-}
+};
 
 export default Info;
