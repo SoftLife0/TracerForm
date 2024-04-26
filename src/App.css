@@ -2,18 +2,30 @@ body {
     margin: 0;
     padding: 0;
     background: #fff;
-    font-family: 'SF UI Display Bold', sans-serif;
+    font-family: 'SF UI Display', sans-serif;
 }
 
 .pill-button{
-    color: #992621;
-    border: 1px solid #992621;
-    background-color: white;
+    color: #dc3545;
+    border: 1px solid #fff;
+    background: #fff;
     border-radius:10px ;
     padding: 16px 22px;
-    box-shadow: 0 2px 8px 0 rgba(48, 44, 255, 0.1);
+    /* box-shadow: 0 2px 8px 0 rgba(220, 53, 69); */
     text-align: center;
     font-weight: bold;
     transition: width 2s;
-    /* width: 100%; */
-  }
+    font-size: 16px;
+    font-family: 'SF UI Display Bold', sans-serif;
+
+}
+
+.headings h2 {
+    font-size: 30px;
+    font-family: 'SF UI Display ', sans-serif; 
+}
+
+.headings p {
+    text-align: justify;
+    font-family: 'SF UI Display ', sans-serif; 
+}
