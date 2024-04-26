@@ -68,7 +68,7 @@ const Form = () => {
     staying: '',
     schoolReturn: '',
     unemployedReason: '',
-    employment: '',
+    work: '',
     workframe: '',
     // Initial state for Suggestions
     overall: '',

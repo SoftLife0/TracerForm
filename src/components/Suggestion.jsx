@@ -25,7 +25,8 @@ const Suggestion = ({ formData, onChange }) => {
   return (
     <div>
         <div className='headings'>
-            <h2>Suggestion</h2>
+            <h2>Feedback & Suggestion</h2>
+            <p></p>
         </div>
 
         <TextField

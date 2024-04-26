@@ -31,3 +31,10 @@ body {
     font-family: 'SF UI Display ', sans-serif;
     margin: 1vh 0;
 }
+
+.checkmark {
+    color: #9ABC66;
+      font-size: 100px;
+      line-height: 200px;
+      margin-left:-15px;
+}

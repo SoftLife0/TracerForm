@@ -87,7 +87,7 @@ const Skill = ({ formData, onChange }) => {
     { value: 'Others', label: 'Others' }
   ];
   
-  const employmentOptions = [
+  const workOptions = [
     { value: '', label: 'Select an option...' },
     { value: 'Yes', label: 'Yes' },
     { value: 'No', label: 'No' }
@@ -219,14 +219,14 @@ const Skill = ({ formData, onChange }) => {
       <TextField
         select
         label="Have you ever been employed since graduation?"
-        name="employment"
-        value={formData.employment}
+        name="work"
+        value={formData.work}
         onChange={handleInputChange}
         fullWidth
         margin="dense"
         variant="standard"
       >
-        {employmentOptions.map(option => (
+        {workOptions.map(option => (
           <MenuItem key={option.value} value={option.value}>
             {option.label}
           </MenuItem>
