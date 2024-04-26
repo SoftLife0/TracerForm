@@ -84,10 +84,11 @@ const Employment = ({ formData, onChange }) => {
   return (
     <div>
 
-      <div className='title'>
-        <h4 style={{ fontWeight: 'bold', fontSize: '24px', margin: '0' }}>Employment Information</h4>
+      <div className='headings'>
+        <h2>Employment Information</h2>        
+        {/* <p>Kindly fill this form</p> */}
       </div>
-
+      
       <TextField
         select
         label="Current Employment Status"

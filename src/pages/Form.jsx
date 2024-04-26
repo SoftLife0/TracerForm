@@ -92,8 +92,9 @@ const Form = () => {
   return (
     <>
       <Header />
-      <Container style={{ marginTop: '10vh', background: '#fff', marginBottom: '5vh' }} >
+      <Container style={{ marginTop: '12vh', background: '#fff', marginBottom: '5vh' }} >
 
+      {step === 1 && (
         <div className='headings'>
           <h2>Tracer Studies</h2>
           <p>Dear Graduate, Through this questionnaire CU aims to track its graduates and receive feedback regarding the type of work, further study or other activity you are/have been involved in since you completed your study from Central University. The information provided will assist the institution to plan both for future educational needs and improve its programmes. Results of this tracer study will only be presented in summary form and individual responses will be kept strictly confidential. We would, therefore, highly appreciate if you could complete the following questionnaire and return it to us, at your earliest convenience. 
@@ -101,6 +102,7 @@ const Form = () => {
           <p>This questionnaire is designed to enable follow your journey after Name of University.</p>
           <br />
         </div>
+      )}
 
         <form onSubmit={handleSubmit}>
           {step === 1 && <Info formData={formData} onChange={handleInputChange} />}
