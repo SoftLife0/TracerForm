@@ -1,5 +1,4 @@
 import React from 'react'
-import { TextField, MenuItem } from '@mui/material';
 
 const Suggestion = ({ formData, onChange }) => {
 
@@ -72,91 +71,96 @@ const Suggestion = ({ formData, onChange }) => {
         <h2>Career and Future Intentions</h2>
       </div>
 
-      <TextField
-        select
-        label="How likely are you to staying in your current job or profession?"
-        name="staying"
-        value={formData.staying}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      >
-        {stayingOptions.map(option => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
 
-      <TextField
-        select
-        label="How likely are you to return to the same school?"
-        name="schoolReturn"
-        value={formData.schoolReturn}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      >
-        {schoolReturnOptions.map(option => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
-
-      <TextField
-        select
-        label="What is the main reason you are unemployed?"
-        name="unemployedReason"
-        value={formData.unemployedReason}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      >
-        {unemployedReasonOptions.map(option => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
-
-      <TextField
-        select
-        label="Have you ever been employed since graduation?"
-        name="work"
-        value={formData.work}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      >
-        {workOptions.map(option => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
-
-      {formData.employment === 'Yes' && (
-        <TextField
-            select
-            label="How long did you work?"
-            name="workframe"
-            value={formData.workframe}
-            onChange={handleInputChange}
-            fullWidth
-            margin="dense"
-            variant="standard"
+      <div className="form-control">
+        <label htmlFor="staying" className="form-label">How likely are you to staying in your current job or profession?</label>
+        <select 
+          className="answerCard" 
+          id="staying" 
+          name="staying" 
+          value={formData.staying} 
+          onChange={handleInputChange}
         >
+          {stayingOptions.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className="form-control">
+        <label htmlFor="schoolReturn" className="form-label">How likely are you to return to the same school?</label>
+        <select 
+          className="answerCard" 
+          id="schoolReturn" 
+          name="schoolReturn" 
+          value={formData.schoolReturn} 
+          onChange={handleInputChange}
+        >
+          {schoolReturnOptions.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className="form-control">
+        <label htmlFor="unemployedReason" className="form-label">What is the main reason you are unemployed?</label>
+        <select 
+          className="answerCard" 
+          id="unemployedReason" 
+          name="unemployedReason" 
+          value={formData.unemployedReason} 
+          onChange={handleInputChange}
+        >
+          {unemployedReasonOptions.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className="form-control">
+        <label htmlFor="work" className="form-label">Have you ever been employed since graduation?</label>
+        <select 
+          className="answerCard" 
+          id="work" 
+          name="work" 
+          value={formData.work} 
+          onChange={handleInputChange}
+        >
+          {workOptions.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
+
+
+      
+      
+
+      {formData.work === 'Yes' && (
+        <div className="form-control">
+          <label htmlFor="workframe" className="form-label">How long did you work?</label>
+          <select 
+            className="answerCard" 
+            id="workframe" 
+            name="workframe" 
+            value={formData.workframe} 
+            onChange={handleInputChange}
+          >
             {workframeOptions.map(option => (
-            <MenuItem key={option.value} value={option.value}>
+              <option key={option.value} value={option.value}>
                 {option.label}
-            </MenuItem>
+              </option>
             ))}
-        </TextField>
+          </select>
+        </div>
 
       )}
 
@@ -166,49 +170,54 @@ const Suggestion = ({ formData, onChange }) => {
             <p></p>
         </div>
 
-        <TextField
-        select
-        label="How would you rate your overall satisfaction with your university’s preparation for the type of work you were/are doing?"
-        name="overall"
-        value={formData.overall}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      >
-        {overallOptions.map(option => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
+        <div className="form-control">
+          <label htmlFor="overall" className="form-label">How would you rate your overall satisfaction with your university’s preparation for the type of work you were/are doing?</label>
+          <select 
+            className="answerCard" 
+            id="overall" 
+            name="overall" 
+            value={formData.overall} 
+            onChange={handleInputChange}
+          >
+            {overallOptions.map(option => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </div>
+        
+        <div className="form-control">
+          <label htmlFor="recommend" className="form-label">Would you recommend your program to someone else or not? (If respondent is enrolled in a second tertiary program, response required for their previous program)</label>
+          <select 
+            className="answerCard" 
+            id="recommend" 
+            name="recommend" 
+            value={formData.recommend} 
+            onChange={handleInputChange}
+          >
+            {recommendOptions.map(option => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </div>
 
-      <TextField
-        select
-        label="Would you recommend your program to someone else or not?"
-        name="recommend"
-        value={formData.recommend}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      >
-        {recommendOptions.map(option => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
-
-      <TextField
-        label="Do you have any suggestions for overall service delivery at Central University?"
-        name="suggestion"
-        value={formData.suggestion}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      />
+        <div className="form-control">
+          <label htmlFor="suggestion" className="form-label">Do you have any suggestions for overall service delivery at Central University?</label>
+          <textarea 
+            className="answerCard" 
+            id="suggestion" 
+            name="suggestion" 
+            placeholder="Kindly write your suggestion here ...." 
+            required
+            type="text" 
+            value={formData.suggestion} 
+            onChange={handleInputChange} 
+            style={{height:'5vh'}}
+          ></textarea>
+        </div>
 
     </div>
   );
