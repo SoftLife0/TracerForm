@@ -1,5 +1,4 @@
 import React from 'react';
-import { TextField, MenuItem } from '@mui/material';
 
 const Skill = ({ formData, onChange }) => {
   const handleInputChange = (e) => {
@@ -74,53 +73,48 @@ const Skill = ({ formData, onChange }) => {
     
     {/* Skills Question  */}
 
-      {skillQuestions.map((question) => (
-        <TextField
-          key={question.name}
-          select
-          label={question.label}
+    {skillQuestions.map((question) => (
+      <div className="form-control" key={question.name}>
+        <label htmlFor={question.name} className="form-label">{question.label}</label>
+        <select
+          className="answerCard"
+          id={question.name}
           name={question.name}
           value={formData[question.name]}
           onChange={handleInputChange}
-          fullWidth
-          margin="dense"
-          variant="standard"
         >
-          <MenuItem value="" disabled>Select an option...</MenuItem>
           {skillOptions.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
+            <option key={option.value} value={option.value}>
               {option.label}
-            </MenuItem>
+            </option>
           ))}
-        </TextField>
-      ))}
-
-      {/* Ability Question */}
-    
-      <div className='headings'>
-        <p style={{fontWeight:'bold', textAlign:'initial'}}>When you first started working after graduation, how would you rate your level of preparedness for the following skills and abilities. Please tell us if you were well prepared, prepared, somewhat unprepared and completely unprepared:</p>
+        </select>
       </div>
+    ))}
 
-      {abilityQuestions.map((question) => (
-        <TextField
-          key={question.name}
-          select
-          label={question.label}
+    {/* Ability Question */}
+    <div className='headings'>
+      <p style={{ fontWeight: 'bold', textAlign: 'initial' }}>When you first started working after graduation, how would you rate your level of preparedness for the following skills and abilities. Please tell us if you were well prepared, prepared, somewhat unprepared and completely unprepared:</p>
+    </div>
+
+    {abilityQuestions.map((question) => (
+      <div className="form-control" key={question.name}>
+        <label htmlFor={question.name} className="form-label">{question.label}</label>
+        <select
+          className="answerCard"
+          id={question.name}
           name={question.name}
           value={formData[question.name]}
           onChange={handleInputChange}
-          fullWidth
-          margin="dense"
-          variant="standard"
         >
-          <MenuItem value="" disabled>Select an option...</MenuItem>
           {abilityOptions.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
+            <option key={option.value} value={option.value}>
               {option.label}
-            </MenuItem>
+            </option>
           ))}
-        </TextField>
-      ))}
+        </select>
+      </div>
+    ))}
 
     </div>
   );
