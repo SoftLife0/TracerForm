@@ -1,6 +1,6 @@
 // Info.jsx
+import { Container } from '@mui/material';
 import React from 'react';
-// import { TextField, MenuItem } from '@mui/material';
 
 const Info = ({ formData, onChange }) => {
   const handleInputChange = (e) => {
@@ -22,14 +22,14 @@ const Info = ({ formData, onChange }) => {
 
   const satisfactionOptions = [
     { value: '', label: 'Select an option...', disabled: true },
-    { value: 'Very satisfied', label: 'Very satisfied' },
+    { value: 'Very Satisfied', label: 'Very Satisfied' },
     { value: 'Satisfied', label: 'Satisfied' },
     { value: 'Unsatisfied', label: 'Unsatisfied' },
-    { value: 'Very unsatisfied', label: 'Very unsatisfied' }
+    { value: 'Very Unsatisfied', label: 'Very Unsatisfied' }
   ];
 
   return (
-    <div>
+    <Container>
 
       <div className='headings'>
         <h2>Personal Information</h2>
@@ -127,7 +127,6 @@ const Info = ({ formData, onChange }) => {
           value={formData.others} 
           onChange={handleInputChange}
         >
-          <option value="">Select</option>
           {othersOptions.map(option => (
             <option key={option.value} value={option.value}>
               {option.label}
@@ -173,7 +172,7 @@ const Info = ({ formData, onChange }) => {
             id="completed" 
             name="completed" 
             placeholder="Year of Completion" 
-            type="number" 
+            type="text" 
             value={formData.completed} 
             onChange={handleInputChange} 
           />
@@ -199,7 +198,7 @@ const Info = ({ formData, onChange }) => {
     )}
 
 
-    </div>
+    </Container>
   );
 };
 

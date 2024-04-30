@@ -44,7 +44,7 @@ body {
   }
   
   .form-label {
-    font-family: 'SF UI Display Bold', sans-serif; /* Apply SF UI Display font */
+    font-family: 'SF UI Display ', sans-serif; /* Apply SF UI Display font */
   }
   
   .answerCard {

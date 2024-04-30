@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextField, MenuItem } from '@mui/material';
+import { Container } from '@mui/material';
 
 const Employment = ({ formData, onChange }) => {
 
@@ -82,199 +82,209 @@ const Employment = ({ formData, onChange }) => {
     ];
 
   return (
-    <div>
+    <Container>
 
       <div className='headings'>
         <h2>Employment Information</h2>        
         {/* <p>Kindly fill this form</p> */}
       </div>
       
-      <TextField
-        select
-        label="Current Employment Status"
-        name="current"
-        value={formData.current}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      >
-        {currentOptions.map(option => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
+      <div className="form-control">
+        <label htmlFor="current" className="form-label">Current Employment Status</label>
+        <select 
+          className="answerCard" 
+          id="current" 
+          name="current" 
+          value={formData.current} 
+          onChange={handleInputChange}
+        >
+          {currentOptions.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
 
-      <TextField
-        select
-        label="How long did it take you to find your job?"
-        name="job"
-        value={formData.job}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      >
-        {jobOptions.map(option => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
+      <div className="form-control">
+        <label htmlFor="job" className="form-label">How long did it take you to find your job?</label>
+        <select 
+          className="answerCard" 
+          id="job" 
+          name="job" 
+          value={formData.job} 
+          onChange={handleInputChange}
+        >
+          {jobOptions.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
 
-      <TextField
-        select
-        label="How related is your current job to your program of study?"
-        name="serviceOptions"
-        value={formData.serviceOptions}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      >
-        {serviceOptions.map(option => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
+      <div className="form-control">
+        <label htmlFor="serviceOptions" className="form-label">How related is your current job to your program of study?</label>
+        <select 
+          className="answerCard" 
+          id="serviceOptions" 
+          name="serviceOptions" 
+          value={formData.serviceOptions} 
+          onChange={handleInputChange}
+        >
+          {serviceOptions.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
 
-      <TextField
-        label="Organization"
-        name="orgname"
-        value={formData.orgname}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      />
+      <div className="form-control">
+        <label htmlFor="orgname" className="form-label">Organization</label>
+        <input 
+          className="answerCard" 
+          id="orgname" 
+          name="orgname" 
+          placeholder="Organization" 
+          required="" 
+          type="text" 
+          value={formData.orgname} 
+          onChange={handleInputChange} 
+        />
+      </div>
 
-      <TextField
-        label="Organization Address"
-        name="orgadd"
-        value={formData.orgadd}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      />
+      <div className="form-control">
+        <label className="form-label">Organization Address</label>
+        <input 
+          className="answerCard" 
+          // id="orgadd" 
+          name="orgadd" 
+          placeholder="Organization Address" 
+          required
+          type="text" 
+          value={formData.orgadd} 
+          onChange={handleInputChange} 
+        />
+      </div>
 
-      <TextField
-        label="Job Title"
-        name="title"
-        value={formData.title}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      />
+      <div className="form-control">
+        <label htmlFor="title" className="form-label">Job Title</label>
+        <input 
+          className="answerCard" 
+          id="title" 
+          name="title" 
+          placeholder="Job Title" 
+          required="" 
+          type="text" 
+          value={formData.title} 
+          onChange={handleInputChange} 
+        />
+      </div>
 
-      <TextField
-        select
-        label="Type of Organization"
-        name="orgtypeOptions"
-        value={formData.orgtypeOptions}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      >
-        {orgtypeOptions.map(option => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
+      <div className="form-control">
+        <label htmlFor="orgtypeOptions" className="form-label">Type of Organization</label>
+        <select 
+          className="answerCard" 
+          id="orgtypeOptions" 
+          name="orgtypeOptions" 
+          value={formData.orgtypeOptions} 
+          onChange={handleInputChange}
+        >
+          {orgtypeOptions.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
 
-      <TextField
-        select
-        label="What is your current monthly gross salary?"
-        name="salaryOptions"
-        value={formData.salaryOptions}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      >
-        {salaryOptions.map(option => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
+      <div className="form-control">
+        <label htmlFor="salaryOptions" className="form-label">What is your current monthly gross salary?</label>
+        <select 
+          className="answerCard" 
+          id="salaryOptions" 
+          name="salaryOptions" 
+          value={formData.salaryOptions} 
+          onChange={handleInputChange}
+        >
+          {salaryOptions.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
 
-      <TextField
-        select
-        label="In your current job, are you"
-        name="employmentOptions"
-        value={formData.employmentOptions}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      >
-        {employmentOptions.map(option => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
+      <div className="form-control">
+        <label htmlFor="employmentOptions" className="form-label">In your current job, are you</label>
+        <select 
+          className="answerCard" 
+          id="employmentOptions" 
+          name="employmentOptions" 
+          value={formData.employmentOptions} 
+          onChange={handleInputChange}
+        >
+          {employmentOptions.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
 
-      <TextField
-        select
-        label="To what extent did the skills you developed during your studies help you get your job? Would you say that your skills were"
-        name="skillsOptions"
-        value={formData.skillsOptions}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      >
-        {skillsOptions.map(option => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
+      <div className="form-control">
+        <label htmlFor="skillsOptions" className="form-label">To what extent did the skills you developed during your studies help you get your job? Would you say that your skills were</label>
+        <select 
+          className="answerCard" 
+          id="skillsOptions" 
+          name="skillsOptions" 
+          value={formData.skillsOptions} 
+          onChange={handleInputChange}
+        >
+          {skillsOptions.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
 
-      <TextField
-        select
-        label="How long have you been employed or self-employed?"
-        name="timeframeOptions"
-        value={formData.timeframeOptions}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      >
-        {timeframeOptions.map(option => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
+      <div className="form-control">
+        <label htmlFor="timeframeOptions" className="form-label">To what extent did the skills you developed during your studies help you get your job? Would you say that your skills were</label>
+        <select 
+          className="answerCard" 
+          id="timeframeOptions" 
+          name="timeframeOptions" 
+          value={formData.timeframeOptions} 
+          onChange={handleInputChange}
+        >
+          {timeframeOptions.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
 
-      <TextField
-        select
-        label="Did your degree earned from CU provide the requisite technical know-how of your job?"
-        name="earnOptions"
-        value={formData.earnOptions}
-        onChange={handleInputChange}
-        fullWidth
-        margin="dense"
-        variant="standard"
-      >
-        {earnOptions.map(option => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
+      <div className="form-control">
+        <label htmlFor="earnOptions" className="form-label">To what extent did the skills you developed during your studies help you get your job? Would you say that your skills were</label>
+        <select 
+          className="answerCard" 
+          id="earnOptions" 
+          name="earnOptions" 
+          value={formData.earnOptions} 
+          onChange={handleInputChange}
+        >
+          {earnOptions.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
 
-      
-
-    </div>
+    </Container>
   );
 };
 

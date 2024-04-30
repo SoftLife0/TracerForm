@@ -131,7 +131,7 @@ const Form = () => {
         </div>
       )}
 
-        <form onSubmit={handleSubmit}>
+        <div onSubmit={handleSubmit}>
           {step === 1 && <Info formData={formData} onChange={handleInputChange} />}
           {step === 2 && <Employment formData={formData} onChange={handleInputChange} />}
           {step === 3 && <Skill formData={formData} onChange={handleInputChange} />}
@@ -143,7 +143,7 @@ const Form = () => {
           ) : (
             <SubmitButton onClick={handleSubmit} text="Submit" />
           )}
-        </form>
+        </div>
       </Container>
     </>
   );

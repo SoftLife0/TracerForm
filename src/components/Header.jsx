@@ -6,7 +6,7 @@ const Header = () => {
     <div style={{ position: 'fixed', width: '100%', zIndex: '100', top: '0', backgroundColor: '#dc3545', borderBottom: '1px solid #dc3545' }}>
           <Container>
         <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{ padding: '13px 0', display: 'flex', justifyContent: 'space-between' }}>
-          <a className="navbar-brand" href="/" style={{ color: '#fff', fontWeight: '800', fontSize: '22px', textDecoration: 'none', paddingTop:'10px'}}>Alumni Tracer Form</a>
+          <a className="navbar-brand" href="/" style={{ color: '#fff', fontWeight: '700', fontSize: '24px', textDecoration: 'none', paddingTop:'10px'}}>Alumni Tracer Form</a>
           <button className="pill-button">Dashboard</button>
         </nav>
         </Container>
